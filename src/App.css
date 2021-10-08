@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+
+body {
+  margin:  0;
+  padding: 0;
+  font-family: Montserrat;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    background-image: url("https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+    height :90vh ; 
+    font-family: 'Indie Flower', cursive;
+    background-size: cover ;
+    background-position: bottom ;
+    display: flex ;
+    flex-direction: column ;
+    padding-top:15vh;
+    align-items: center ;
+    }
+
+header nav ul  {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header nav ul a {
+    text-decoration: none;
+    color: black;
+    transition: all;
+    transition-property: font-size,border-bottom;
+    transition-duration: .8s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header nav ul a:hover {
+   font-size: 1.5em;
+   border-bottom: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+
+button {
+    display: inline-block;
+    line-height: 80px;
+    padding: 0.3em 0.5em;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    background: #fff;
+    border:none;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    color: #7795f8;
+    animation-name: btn;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes btn {
+    30% {
+        border-radius: 60%;
+        transform: translate(45px);
+    }
+    60% {
+        border-radius: 0.5em;
+    }
+    70% {
+        border-radius: 0.5em;
+        transform: translate(-25px);
+    }
 }
+
+
+
+
+h1 {
+font-size: 4em ;
+font-weight: 400 ; 
+margin-bottom : 0px;
+}
+
+
+main {
+    background-color: #f6f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cards {
+    background-color: white;
+    max-width: 1200px;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+#cards h3 {
+    color:#24b47e ; 
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#cards p {
+    line-height: 1.8em;
+}
+
+img {
+    height: 125px;
+}
+
+#footer img{
+   margin: 45px;
+   transform: scale(0.5);
+}
+
+
+#cards section {
+    padding: 4em;
+}
+@media screen and (max-width:900px) {
+    #cards {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:700px) {
+    p ,a{
+        font-size: 1.5em;
+
+    }
+    header {
+        top:45px;
+        height: 50vh;
+        font-size: 0.8em;
+    }
+    nav {
+        display: none;
+    }
+
+    button {
+        line-height: 45px;
+    }
+    #cards img {
+        float: center;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.2);
+        border-radius: 25%;
+    }
+
+    #footer img{
+       margin: 0px;
+        transform: scale(0.2);
+     }
+     .container{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         width:100%;
+         height:100%;
+         background-color: lightsalmon;
+     }
+     .form-box{
+         width:380px;
+         height:450px;
+         background-color: black;
+         padding: 5px;;
+
+     }
+}
+
